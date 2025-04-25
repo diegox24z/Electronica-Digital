@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrónica Digital</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 0 20px 50px;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: #edecf1;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #1ae5f8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        display: none;
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .nav-links.active {
+        display: flex;
+        max-height: 500px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    main {
+      padding-top: 90px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #2980b9;
+      margin-top: 0 px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #34495e;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .table-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 2px solid #34495e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 0 auto;
+    }
+
+    th, td {
+      padding: 12px 18px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #34495e;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e0f0ff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <label class="logo">Electrónica Digital</label>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a class="active" href="Fundamentos.html">Fundamentos</a></li>
+      <li><a href="Circuitos Digitales.html">Circuitos Digitales</a></li>
+      <li><a href="Historia y Evolución.html">Historia y Evolución</a></li>
+      <li><a href="Recursos y Contacto.html">Recursos y Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+<section><h1>Fundamentos de la electronica digital</h1>
+  <img src="img/Imagen2.jpg" width="100%">
+</section>
+    <section>
+      <h1>¿Cuales son los fundamentos de la electronica digital?</h1><p>
+      La electrónica digital es una rama fundamental de la ingeniería que se encarga del estudio, diseño y aplicación de sistemas que procesan información en forma binaria, es decir, utilizando únicamente dos estados: 0 y 1.
+      <p>Estos estados corresponden a niveles de voltaje que representan valores lógicos, y permiten la construcción de circuitos capaces de realizar operaciones aritméticas, lógicas, de control y almacenamiento.</p> <p>Gracias a sus principios basados en el sistema binario y la lógica booleana, la electrónica digital es la base tecnológica de casi todos los dispositivos modernos, desde computadoras y teléfonos móviles hasta automóviles y sistemas automatizados. Sus fundamentos son los siguientes:
+      </p></p>
+    </section>
+    <section>
+      <h2> 1. Sistema binario</h2>
+      <p>La electrónica digital se basa en el sistema binario, que solo usa dos dígitos: 0 y 1. Estos valores representan los estados bajo (apagado) y alto (encendido) de un voltaje eléctrico. En la práctica, el 0 puede ser 0V y el 1 puede ser 5V o 3.3V, dependiendo de la tecnología del circuito.</p>
+    </section>
+    <section><h2>2. Lógica booleana</h2>
+    <p>
+      La lógica booleana es la base matemática de la electrónica digital. Se usa para expresar y simplificar operaciones lógicas mediante variables binarias y operadores como: 
+      AND (Y)
+      OR (O)
+      NOT (NO)
+      NAND, NOR, XOR, XNOR.
+      Estas operaciones se implementan en el hardware con compuertas lógicas.</p>
+     </section>
+     <section><h2>
+      3. Compuertas lógicas </h2>
+      <p>Son los bloques básicos de cualquier circuito digital. Cada compuerta realiza una operación lógica específica. Por ejemplo:
+        La compuerta AND solo da 1 si ambas entradas son 1.
+        La compuerta OR da 1 si al menos una entrada es 1.
+        La compuerta NOT invierte el valor: si es 0, da 1 y viceversa.
+        Estas compuertas se combinan para construir circuitos más complejos.
+        </p></section>
+        <section><h2>4. Álgebra de Boole</h2>
+        <p>
+          Es el conjunto de reglas que permite simplificar expresiones lógicas. Esto es útil para optimizar circuitos (menos compuertas = menos consumo y costo). Por ejemplo:
+         <ul>
+         <li> A + 0 = A
+          <li> A · 1 = A
+          <li> A + A = A
+          <li> A · A = A
+          <li> A + A' = 1 (A más su negación es igual a 1)
+          </li>
+          </li>
+           </li>
+           </li>
+         </li>
+        </ul>
+    </p></section>
+    <section>
+      <h2>5. Circuitos combinacionales</h2>
+      <p>Son circuitos cuya salida depende únicamente del estado actual de sus entradas. No tienen memoria. Algunos ejemplos:
+        <ul>
+          <li> Sumadores
+            <li> Multiplexores
+              <li> Comparadores
+                <li>Codificadores/Decodificadores.
+                </li>
+              </li>
+            </li>
+          </li>
+        </ul>
+        </p>
+        <section>
+          <h2>6. Circuitos secuenciales</h2>
+          <p>Aquí la salida depende tanto de las entradas actuales como de los estados anteriores (es decir, tienen memoria). Se construyen con flip-flops, que son circuitos capaces de almacenar un bit. Ejemplos de circuitos secuenciales:
+            Contadores,
+            Registros,
+            Máquinas de estado.
+            </p>
+        </section>
+        <section>
+          <h2>7. Sistemas numéricos</h2>
+          <p>Además del binario, también se usan otros sistemas como:
+            Decimal (base 10): el sistema que usamos normalmente.
+            Octal (base 8) y Hexadecimal (base 16): útiles para representar datos binarios de forma más compacta.</p>
+        </section>
+        <section><h2>8. Microcontroladores y sistemas embebidos</h2>
+          <p>Además del binario, también se usan otros sistemas como: Decimal (base 10): el sistema que usamos normalmente. Octal (base 8) y Hexadecimal (base 16): útiles para representar datos binarios de forma más compacta. </p>
+        </section>
+        <section>
+        </head>
+        <body>
+          <h2>Tabla de Conversión: Decimal, Binario y Hexadecimal</h2>
+          <table> <center>
+            <thead>
+              <tr>
+                <th>Decimal</th>
+                <th>Binario (8 bits)</th>
+                <th>Hexadecimal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td>00000000</td><td>0</td></tr>
+              <tr><td>1</td><td>00000001</td><td>1</td></tr>
+              <tr><td>2</td><td>00000010</td><td>2</td></tr>
+              <tr><td>3</td><td>00000011</td><td>3</td></tr>
+              <tr><td>4</td><td>00000100</td><td>4</td></tr>
+              <tr><td>5</td><td>00000101</td><td>5</td></tr>
+              <tr><td>6</td><td>00000110</td><td>6</td></tr>
+              <tr><td>7</td><td>00000111</td><td>7</td></tr>
+              <tr><td>8</td><td>00001000</td><td>8</td></tr>
+              <tr><td>9</td><td>00001001</td><td>9</td></tr>
+              <tr><td>10</td><td>00001010</td><td>A</td></tr>
+              <tr><td>11</td><td>00001011</td><td>B</td></tr>
+              <tr><td>12</td><td>00001100</td><td>C</td></tr>
+              <tr><td>13</td><td>00001101</td><td>D</td></tr>
+              <tr><td>14</td><td>00001110</td><td>E</td></tr>
+              <tr><td>15</td><td>00001111</td><td>F</td></tr>
+            </tbody>
+          </table>
+        </center>
+        </section>
+    </section>
+  </main>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+<center><hr style width="40%" >
+<div class="video-container">
+<center><iframe width="600" height="300" src="https://www.youtube.com/embed/T0gKqoupmCM?si=r0susq6IvkzwmPt-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></html></center> </div> </hr></center>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cra. 45 #48-31, Nte. Centro Historico, Barranquilla, Atlántico, Colombia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4808111654015!2d-74.78529208962328!3d10.986044856989311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d6495db4481%3A0xda626b57e9840495!2sUniversity%20Institution%20ITSA!5e1!3m2!1sen!2sco!4v1745548279789!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-phone"></i> +57 3045574048</p>
+        <p><i class="fas fa-envelope"></i> info@DiegoOrellanoElectronicaDigital.com</p>
+      </div>
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+      <p>© 2025 Diego Orellano. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrónica Digital</title>
+</head>
+<style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 0 20px 50px;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: #edecf1;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #1ae5f8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        display: none;
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .nav-links.active {
+        display: flex;
+        max-height: 500px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    main {
+      padding-top: 90px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #2980b9;
+      margin-top: 0 px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #34495e;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .table-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 2px solid #34495e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 0 auto;
+    }
+
+    th, td {
+      padding: 12px 18px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #34495e;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e0f0ff;
+    }
+  </style>
+<body>
+  <nav>
+    <label class="logo">Electrónica Digital</label>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Fundamentos.html">Fundamentos</a></li>
+      <li><a href="Circuitos Digitales.html">Circuitos Digitales</a></li>
+      <li><a class="active" href="Historia y Evolución.html">Historia y Evolución</a></li>
+      <li><a href="Recursos y Contacto.html">Recursos y Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+  <section><h1>Historia y Evolución de la Electrónica Digital</h1></section>
+  <section><h2>1. Primeros pasos (antes de 1940)
+    </h2>
+  <p> Antes de que surgiera la electrónica digital como la conocemos hoy, los sistemas electrónicos eran puramente analógicos. Los ingenieros se valían de voltajes y corrientes continuas para representar señales, sin una estructura discreta que facilitara el procesamiento lógico de la información. Sin embargo, en este contexto nacieron las primeras ideas que sembrarían la base de la computación moderna.</p>
+  <p>    Una de las tecnologías clave en esta etapa fueron los relés, interruptores electromecánicos que podían abrirse o cerrarse en respuesta a señales eléctricas. Estos dispositivos permitían realizar operaciones lógicas básicas como AND y OR, aunque eran lentos y propensos al desgaste mecánico.</p>
+    
+  <p>El gran salto teórico vino de la mano de George Boole en el siglo XIX, quien desarrolló el álgebra booleana, una forma de lógica matemática basada en dos estados: verdadero (1) y falso (0). Aunque su trabajo fue puramente teórico en su momento, décadas después se convertiría en la piedra angular de la lógica digital.</p></section>
+  <section><h2>2. La era de las válvulas (1940s)</h2>
+    <p>La década de 1940 marcó el comienzo de la computación digital práctica, gracias al uso de válvulas de vacío. Estas válvulas podían controlar el flujo de corriente eléctrica y actuar como interruptores electrónicos, permitiendo la implementación de circuitos lógicos digitales</p>
+    <p>Uno de los hitos más importantes de esta época fue la creación de la ENIAC (Electronic Numerical Integrator and Computer) en 1946, una de las primeras computadoras digitales de propósito general. Con más de 17,000 válvulas, esta máquina ocupaba una habitación entera, consumía cantidades enormes de energía y requería constante mantenimiento. Aun así, su existencia probó que era posible construir máquinas capaces de realizar operaciones binarias complejas, lo que abrió las puertas a la evolución de la electrónica digital.</p></section>
+    <section><h2>3. Invención del transistor (1947)</h2>
+      <p>En 1947, los científicos John Bardeen, Walter Brattain y William Shockley, trabajando en los Laboratorios Bell, inventaron el transistor. Este dispositivo revolucionó la electrónica al ofrecer una alternativa mucho más eficiente a las válvulas de vacío.</p>
+      <p>Los transistores eran más pequeños, rápidos, confiables y económicos. Además, su consumo de energía era significativamente menor. Estas características permitieron el desarrollo de dispositivos electrónicos más compactos y dieron lugar a la segunda generación de computadoras.</p>
+      <p>Los transistores también facilitaron la creación de componentes básicos como amplificadores, osciladores y conmutadores, sentando las bases de circuitos digitales más complejos.</p></section>
+    <section><h2>4. Circuitos integrados (década de 1960)</h2>
+    <p>Durante los años 60, la tecnología dio otro gran paso con la aparición de los circuitos integrados (ICs). Estos chips permitieron integrar decenas, cientos e incluso miles de transistores en un solo componente de silicio, reduciendo drásticamente el tamaño y aumentando la velocidad de los circuitos.</p>
+    <p>Surgieron familias lógicas como la TTL (Transistor-Transistor Logic) y CMOS (Complementary Metal-Oxide Semiconductor), que ofrecían distintos niveles de velocidad, consumo energético y compatibilidad.</p>
+    <p>También aparecieron los chips lógicos como la popular serie 7400, que incluía puertas lógicas, flip-flops, registros, contadores y otros bloques fundamentales de la lógica digital. Estos circuitos permitieron a los ingenieros diseñar sistemas digitales complejos y modulares, acelerando el desarrollo de computadoras y otros dispositivos electrónicos.</p>
+    <section><h2>5. Microprocesadores y microcontroladores (1970-1990)</h2>
+    <p>La década de 1970 fue testigo de uno de los avances más significativos: la creación del microprocesador. En 1971, Intel lanzó el Intel 4004, el primer microprocesador comercial del mundo. Este pequeño chip contenía la unidad central de procesamiento (CPU) completa de una computadora, integrando en un solo componente funciones que antes requerían múltiples circuitos.</p>
+    <p>Los microprocesadores fueron esenciales en la creación de las computadoras personales (PCs), democratizando el acceso a la tecnología digital. Posteriormente, aparecieron microcontroladores, como los de la familia PIC o AVR, que integraban no solo la CPU, sino también memoria y periféricos en un solo chip. Esto los hacía ideales para sistemas embebidos, donde se necesitaban soluciones compactas y eficientes para tareas específicas.</p>
+    <p>Esta etapa marcó una gran expansión del uso de la electrónica digital, no solo en computadoras, sino también en electrodomésticos, automóviles y maquinaria industrial.
+    </p></section>
+    <section><h2>6. Electrónica digital moderna (2000s en adelante)</h2>
+    <p>Desde el año 2000 en adelante, la electrónica digital ha experimentado una aceleración impresionante. Dispositivos como los FPGAs (Field-Programmable Gate Arrays) permiten diseñar y reconfigurar circuitos lógicos de manera flexible, facilitando la creación rápida de prototipos y sistemas especializados.</p>
+  <p>El auge de los sistemas embebidos ha llevado la electrónica digital a todos los rincones: electrodomésticos inteligentes, automóviles autónomos, drones, robots, dispositivos médicos y más. Tecnologías como el Internet de las Cosas (IoT) han popularizado el uso de sensores y microcontroladores conectados a la red.</p>
+  <p>La miniaturización, la eficiencia energética y la integración de múltiples funciones en chips cada vez más pequeños son ahora prioridades. Esto ha dado lugar a la aparición de dispositivos portátiles y vestibles (wearables), así como sistemas en chip (SoCs) que concentran todo un sistema computacional en un único circuito integrado.</p></section>
+  </section>
+  <section>
+    <body>
+      <h2>Línea de Tiempo de Tecnología en Electrónica</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Década</th>
+            <th>Evento clave</th>
+            <th>Tecnología usada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1940s</td>
+            <td>ENIAC y válvulas</td>
+            <td>Lógica binaria con válvulas</td>
+          </tr>
+          <tr>
+            <td>1950s</td>
+            <td>Computadoras con transistores</td>
+            <td>Transistores BJT</td>
+          </tr>
+          <tr>
+            <td>1960s</td>
+            <td>Circuitos integrados TTL</td>
+            <td>Chips lógicos</td>
+          </tr>
+          <tr>
+            <td>1970s</td>
+            <td>Microprocesadores</td>
+            <td>Intel 4004, Z80</td>
+          </tr>
+          <tr>
+            <td>1980s</td>
+            <td>Microcontroladores</td>
+            <td>PIC, AVR</td>
+          </tr>
+          <tr>
+            <td>2000s+</td>
+            <td>FPGAs, SoCs, IoT</td>
+            <td>Electrónica embebida avanzada</td>
+          </tr>
+        </tbody>
+      </table>
+    </body>    
+  </section>
+  <center><hr style width="40%" >
+    <div class="video-container">
+    <center>
+  <section><center><iframe width="560" height="315" src="https://www.youtube.com/embed/DJcNWknpDSQ?si=e6oIN2qRQ9vE7mwJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center></section>
+  </main>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cra. 45 #48-31, Nte. Centro Historico, Barranquilla, Atlántico, Colombia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4808111654015!2d-74.78529208962328!3d10.986044856989311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d6495db4481%3A0xda626b57e9840495!2sUniversity%20Institution%20ITSA!5e1!3m2!1sen!2sco!4v1745548279789!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-phone"></i> +57 3045574048</p>
+        <p><i class="fas fa-envelope"></i> info@DiegoOrellanoElectronicaDigital.com</p>
+      </div>
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+      <p>© 2025 Diego Orellano. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>

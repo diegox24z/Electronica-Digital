@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electrónica Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 0 20px 50px;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: #edecf1;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #1ae5f8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        display: none;
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .nav-links.active {
+        display: flex;
+        max-height: 500px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    main {
+      padding-top: 90px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #2980b9;
+      margin-top: 0 px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #34495e;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <label class="logo">Electrónica Digital</label>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a class="active" href="index.html">Inicio</a></li>
+      <li><a href="Fundamentos.html">Fundamentos</a></li>
+      <li><a href="Circuitos Digitales.html">Circuitos Digitales</a></li>
+      <li><a href="Historia y Evolución.html">Historia y Evolución</a></li>
+      <li><a href="Recursos y Contacto.html">Recursos y Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h1>Introducción a la Electrónica Digital</h1>
+      <center><img src="img/Imagen1.jpg" width="780" height="465"></center>
+    </section>
+    <section>
+      <h1>¿Qué es la electrónica digital?</h1>
+      <p>La electrónica digital es una disciplina dentro del campo de la electrónica que se ocupa del estudio y la implementación de sistemas electrónicos que procesan señales digitales. A diferencia de la electrónica analógica, que trabaja con señales continuas, la electrónica digital opera con señales discretas, comúnmente representadas por dos estados lógicos: alto (1) y bajo (0).</p>
+
+      <p>Estos estados suelen estar asociados a ciertos niveles de voltaje, por ejemplo, 5V para un 1 lógico y 0V para un 0 lógico, aunque esto puede variar dependiendo del tipo de tecnología (como TTL o CMOS).</p>
+    </section>
+
+    <section>
+      <h2>El sistema binario y la eficiencia digital</h2>
+      <p>En esencia, la electrónica digital se basa en el sistema binario, el mismo que utilizan las computadoras para almacenar y procesar información. Gracias a esto, los circuitos digitales pueden realizar operaciones aritméticas, lógicas, de control y de almacenamiento de datos de manera muy eficiente.</p>
+
+      <p>Esta capacidad ha hecho posible el desarrollo de la informática moderna, desde microprocesadores hasta redes de comunicación.</p>
+    </section>
+
+    <section>
+      <h2>Componentes de los circuitos digitales</h2>
+      <p>Los circuitos digitales están compuestos por componentes como compuertas lógicas, flip-flops, contadores, multiplexores, memorias y microcontroladores. Estos elementos permiten construir desde simples dispositivos de control hasta sistemas complejos como los procesadores.</p>
+
+      <p>Las compuertas lógicas son especialmente importantes porque son los bloques fundamentales que permiten construir cualquier operación lógica o función digital.</p>
+    </section>
+
+    <section>
+      <h2>Ventajas de la electrónica digital</h2>
+      <p>Una de las principales ventajas de la electrónica digital es su inmunidad al ruido. Al trabajar con dos estados bien definidos, los pequeños cambios de voltaje no afectan tanto su funcionamiento como en los circuitos analógicos.</p>
+
+      <p>Además, los sistemas digitales son más fáciles de replicar, modificar y escalar, lo que ha impulsado el desarrollo de la tecnología a gran velocidad.</p>
+    </section>
+    <section>
+      <h1>
+        ¿Dónde se aplica?
+      </h1>
+    </section>
+<section><p>La electrónica digital se aplica en una gran variedad de campos y dispositivos que usamos a diario, además de ser fundamental en la mayoría de los sistemas tecnológicos modernos. Aquí te detallo algunas de sus aplicaciones más relevantes:</p></section>
+
+<section><h2>1. Computación</h2>
+  <p>La electrónica digital es la base de todos los computadores. Desde microprocesadores, memorias RAM, discos duros SSD hasta tarjetas gráficas, todos estos componentes trabajan procesando y almacenando datos en forma digital. Todo sistema operativo, software o juego que usas, depende de esta tecnología para funcionar.</p>
+</section>
+<Section><h2>2. Telefonía y comunicaciones</h2></Section>
+<p>Los teléfonos inteligentes, routers, redes móviles y satelitales funcionan gracias a sistemas digitales. Estos dispositivos usan electrónica digital para codificar, transmitir y recibir información a través de redes. Los estándares como 4G, 5G, Wi-Fi y Bluetooth se basan en esta tecnología.</p>
+
+<Section><h2>3. Automatización Industrial</h2>
+<p>En la industria, la electrónica digital se aplica para el control de robots, líneas de ensamblaje, sensores y actuadores, todos coordinados por sistemas digitales como PLC (controladores lógicos programables) o microcontroladores. Esto mejora la eficiencia, precisión y seguridad de los procesos industriales.</p>
+</Section>
+<section><h2>4. Electrodomésticos inteligentes
+</h2>
+<p>Hoy en día muchos electrodomésticos cuentan con funciones digitales: microondas programables, refrigeradores con pantalla, lavadoras automáticas, aspiradoras robot, asistentes de voz, entre otros. Todos estos dispositivos dependen de circuitos digitales para ejecutar sus funciones.</p></section>
+<section><h2>5. Automóviles
+</h2>
+<p>Los vehículos modernos integran numerosos sistemas digitales: desde las unidades de control del motor (ECU), hasta sensores de reversa, cámaras, sistemas de frenos ABS, bolsas de aire, navegación GPS y entretenimiento. La electrónica digital ha transformado los autos en verdaderas computadoras sobre ruedas.</p></section>
+<section><h2>6. Medicina</h2>
+  <p>Muchos equipos médicos usan sistemas digitales para procesar información: monitores de signos vitales, electrocardiógrafos, tomógrafos, bombas de infusión, etc. Esto permite diagnósticos más precisos, mejor control de los tratamientos y almacenamiento digital de los historiales médicos.</p>
+</section>
+<section><h2>7. Sistemas embebidos</h2>
+<p>La electrónica digital es clave en los sistemas embebidos, que son computadoras pequeñas diseñadas para tareas específicas dentro de un sistema más grande. Por ejemplo: sistemas de control en drones, cámaras digitales, relojes inteligentes, impresoras y más.</p></section>
+<section><h2>8. Electrónica de consumo
+</h2>
+<p>La mayoría de los dispositivos que usamos a diario contienen componentes digitales: consolas de videojuegos, televisores inteligentes, relojes digitales, cámaras fotográficas, tablets, drones, entre muchos otros.</p></section>
+
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+<center><iframe width="600" height="300" src="https://www.youtube.com/embed/w7HNnqetb4w?si=HCji5ZFnQJo6Dpjc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cra. 45 #48-31, Nte. Centro Historico, Barranquilla, Atlántico, Colombia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4808111654015!2d-74.78529208962328!3d10.986044856989311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d6495db4481%3A0xda626b57e9840495!2sUniversity%20Institution%20ITSA!5e1!3m2!1sen!2sco!4v1745548279789!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-phone"></i> +57 3045574048</p>
+        <p><i class="fas fa-envelope"></i> info@DiegoOrellanoElectronicaDigital.com</p>
+      </div>
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+      <p>© 2025 Diego Orellano. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>

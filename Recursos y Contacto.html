@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrónica Digital</title>
+  <style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 0 20px 50px;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: #edecf1;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #1ae5f8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        display: none;
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .nav-links.active {
+        display: flex;
+        max-height: 500px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    main {
+      padding-top: 90px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h1 {
+  font-size: 36px;
+  color: #2980b9;
+  margin-top: 0px;
+  margin-bottom: -40px; 
+}
+
+h2 {
+  font-size: 24px;
+  color: #34495e;
+  margin-top: -40px; 
+}
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <label class="logo">Electrónica Digital</label>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Fundamentos.html">Fundamentos</a></li>
+      <li><a href="Circuitos Digitales.html">Circuitos Digitales</a></li>
+      <li><a href="Historia y Evolución.html">Historia y Evolución</a></li>
+      <li><a class="active" href="Recursos y Contacto.html">Recursos y Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+  </head>
+  <body> <h1>Recursos y Contactos</h1>
+    <main>
+      <section>
+        <h2>Contáctanos</h2>
+        <p>¿Tienes dudas, sugerencias o simplemente quieres decir hola? ¡Escríbenos usando el formulario a continuación!</p>
+  
+        <form action="mailto:tu-correo@example.com" method="POST" enctype="text/plain">
+          <div style="margin-bottom: 15px;">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 8px;">
+          </div>
+  
+          <div style="margin-bottom: 15px;">
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required style="width: 100%; padding: 8px;">
+          </div>
+  
+          <div style="margin-bottom: 15px;">
+            <label for="asunto">Asunto:</label><br>
+            <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required style="width: 100%; padding: 8px;">
+          </div>
+  
+          <div style="margin-bottom: 15px;">
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required style="width: 100%; padding: 8px;"></textarea>
+          </div>
+  
+          <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+        <h2>Recursos útiles</h2>
+        <ul>
+          <li><a href="https://www.arduino.cc/" target="_blank">Sitio oficial de Arduino</a></li>
+          <li><a href="https://www.microchip.com/" target="_blank">Microchip (PIC y AVR)</a></li>
+          <li><a href="https://www.intel.com/" target="_blank">Intel (Procesadores y más)</a></li>
+          <li><a href="https://www.digikey.com/" target="_blank">Distribuidor de componentes electrónicos - Digi-Key</a></li>
+          <li><a href="https://www.ti.com/" target="_blank">Texas Instruments</a></li>
+        </ul>
+      </section>
+  </body>
+  </main>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cra. 45 #48-31, Nte. Centro Historico, Barranquilla, Atlántico, Colombia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4808111654015!2d-74.78529208962328!3d10.986044856989311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d6495db4481%3A0xda626b57e9840495!2sUniversity%20Institution%20ITSA!5e1!3m2!1sen!2sco!4v1745548279789!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-phone"></i> +57 3045574048</p>
+        <p><i class="fas fa-envelope"></i> info@DiegoOrellanoElectronicaDigital.com</p>
+      </div>
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+      <p>© 2025 Diego Orellano. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>

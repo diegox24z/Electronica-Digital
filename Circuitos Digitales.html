@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrónica Digital</title>
+  <style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 0 20px 50px;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      color: #edecf1;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #1ae5f8;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        display: none;
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .nav-links.active {
+        display: flex;
+        max-height: 500px;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    main {
+      padding-top: 90px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #2980b9;
+      margin-top: 0 px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #34495e;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <label class="logo">Electrónica Digital</label>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Fundamentos.html">Fundamentos</a></li>
+      <li><a class="active" href="Circuitos Digitales.html">Circuitos Digitales</a></li>
+      <li><a href="Historia y Evolución.html">Historia y Evolución</a></li>
+      <li><a href="Recursos y Contacto.html">Recursos y Contacto</a></li>
+    </ul>
+  </nav>
+</nav>
+<main>
+<section><h1>Circuitos Digitales en Eléctronica Digital</h1> 
+  <p>Los circuitos digitales son sistemas electrónicos diseñados para trabajar con señales discretas, es decir, señales que solo pueden tener valores específicos, generalmente representados como 0 y 1 (bajo y alto, respectivamente). Estos circuitos realizan una variedad de funciones lógicas, aritméticas o de control, y están construidos utilizando componentes como compuertas lógicas, flip-flops, registros, multiplexores, y otros dispositivos electrónicos.</p>
+  <h1>Tipos de circuitos digitales</h1>
+  <section><h2>1.Circuitos combinacionales:</h2>
+  <p>ELos circuitos combinacionales son aquellos cuya salida depende únicamente del estado actual de sus entradas. Esto significa que no tienen memoria ni retienen información de estados anteriores; el resultado que producen es instantáneo y se actualiza cada vez que cambian las entradas. Estos circuitos se construyen a partir de compuertas lógicas básicas como AND, OR, NOT, XOR, entre otras, combinadas de distintas formas para realizar tareas específicas. Algunos ejemplos incluyen:
+    <p>Sumadores: Realizan operaciones aritméticas como la suma de dos números binarios.</p> <p>Multiplexores: Seleccionan una de varias entradas y la envían a la salida.</p> <p>Codificadores/Decodificadores: Transforman la representación de datos de una forma a otra.</p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/r7YNXYGCx7s?si=jgZMUGZTSeLHyoAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+    <section><h2>2. Circuitos secuenciales:</h2>
+    <p>A diferencia de los combinacionales, los circuitos secuenciales sí poseen memoria, es decir, su salida depende tanto de las entradas actuales como de los estados anteriores. Esta capacidad les permite almacenar información y actuar en función de una secuencia de eventos, lo que los hace ideales para sistemas que requieren control de procesos o pasos ordenados. Estos circuitos se construyen con elementos llamados biestables o flip-flops, que son capaces de guardar un bit de información durante un cierto tiempo. 
+      <p>Un tipo muy común de circuito secuencial son los contadores, que permiten llevar un registro del número de veces que ocurre un evento, como el paso de objetos en una banda transportadora. Otro ejemplo son los registros, que almacenan datos de forma temporal para que puedan ser utilizados por otros componentes del sistema. Además, existen las máquinas de estado finito, que son circuitos diseñados para moverse entre diferentes "estados" en función de las entradas y del estado actual; estas se usan ampliamente en el diseño de controladores digitales, como los que gestionan un semáforo o una interfaz de usuario en un dispositivo.Estos circuitos se utilizan en dispositivos que requieren almacenar información temporal, como:</p>
+      <p>Contadores: Realizan el conteo de eventos, aumentando o disminuyendo su valor de forma secuencial.
+  <p>Registros: Almacenan datos para ser utilizados posteriormente.</p>
+      </p>
+      <p>Máquinas de estado: Controlan sistemas que pasan por diferentes estados en función de las entradas.</p>
+    </p><center><iframe width="560" height="315" src="https://www.youtube.com/embed/glRNM2Ymweg?si=IN2v2jnGfKZqp3mO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center></section>
+    <section><h2>¿Cómo funcionan?</h2>
+      <p>Los circuitos digitales funcionan procesando señales eléctricas que representan valores binarios (0 y 1), y se dividen en dos tipos principales: combinacionales y secuenciales. Los circuitos combinacionales generan sus salidas únicamente a partir de las entradas actuales, sin memoria, mediante el uso de compuertas lógicas como AND, OR y NOT, por lo que su comportamiento es inmediato y determinista. En cambio, los circuitos secuenciales combinan lógica con elementos de memoria, como flip-flops, lo que les permite almacenar información y cambiar su estado en función del tiempo, generalmente sincronizados por una señal de reloj. Esta capacidad de recordar estados anteriores permite a los circuitos secuenciales realizar tareas más complejas como contar, registrar datos y controlar procesos secuenciales, siendo esenciales en dispositivos como relojes digitales, controladores de tráfico o procesadores.</p>
+    </section>
+    <section><h2>Aplicaciones
+    </h2>
+  <section><h2>1. Computadoras y sistemas informáticos</h2>
+    <p>La electrónica digital es la columna vertebral de todos los sistemas informáticos. Los microprocesadores, memorias RAM, discos duros, tarjetas gráficas y placas madre están compuestos por millones de componentes digitales que trabajan con señales binarias. Estos circuitos permiten ejecutar programas, procesar información, almacenar datos y comunicar dispositivos entre sí. Sin electrónica digital, no existirían ni las computadoras personales, ni los servidores, ni Internet.</p></section>
+  
+<section><h2>2. Telefonía móvil y comunicaciones</h2><p>Los teléfonos inteligentes, routers, redes de telecomunicaciones (como 4G y 5G), Bluetooth y Wi-Fi funcionan gracias a sistemas digitales. La información (voz, datos, video) se convierte en señales digitales, se comprime, se transmite y se recibe usando técnicas de modulación digital. Gracias a la electrónica digital es posible hacer videollamadas, enviar mensajes instantáneos y navegar en la web desde cualquier parte del mundo.</p></section>
+  
+<section><h2>3. Automatización y control industrial</h2><p>En las industrias modernas, la electrónica digital se usa para controlar procesos productivos de forma automática. Mediante sistemas como PLC (controladores lógicos programables), sensores y actuadores, se gestionan máquinas, robots industriales y líneas de ensamblaje. Esto mejora la precisión, la seguridad y la eficiencia de la producción en sectores como la automoción, farmacéutica, alimentos y más.</p></section>
+
+  
+<section><h2>4. Electrodomésticos inteligentes</h2><p>Muchos aparatos que usamos en casa incorporan sistemas digitales: televisores inteligentes, refrigeradores, hornos microondas, lavadoras automáticas, robots de limpieza, entre otros. Estos dispositivos pueden programarse, conectarse a Internet, y responder a comandos de voz gracias a circuitos digitales que procesan información y toman decisiones en tiempo real.</p></section>
+  
+<section><h2>5. Transporte y automóviles</h2><p>Los vehículos modernos están repletos de electrónica digital. Desde el encendido electrónico, el sistema de frenos ABS, las bolsas de aire, hasta los sistemas de entretenimiento y navegación GPS, todos utilizan microcontroladores y sensores digitales. Además, los autos eléctricos y autónomos dependen aún más de esta tecnología para la conducción asistida, el análisis de datos y la comunicación con el entorno.
+</p></section>
+<section><h2> 6. Medicina y dispositivos biomédicos</h2><p> La electrónica digital es crucial en equipos médicos modernos como tomógrafos, resonancias magnéticas, monitores de signos vitales, marcapasos y bombas de insulina. Estos dispositivos utilizan circuitos digitales para medir parámetros fisiológicos, procesar señales, detectar anomalías y administrar tratamientos con alta precisión, lo que mejora el diagnóstico y la calidad del cuidado médico.</p></section>
+  
+<section><h2>7. Educación y entretenimiento</h2><p>Consolas de videojuegos, tablets, proyectores, computadoras educativas y plataformas de aprendizaje en línea son posibles gracias a la electrónica digital. En el entretenimiento, se utiliza para producir efectos visuales, gestionar audio, transmitir contenido en streaming y crear experiencias interactivas como realidad virtual o inteligencia artificial aplicada a juegos.
+</p></section>
+<section><h2>8. Dispositivos portátiles y sistemas embebidos</h2><p>Muchos dispositivos personales como relojes inteligentes, cámaras digitales, auriculares inalámbricos y pulseras de actividad están basados en sistemas embebidos. Estos son pequeños sistemas digitales programables diseñados para tareas específicas, como monitorear pasos, medir ritmo cardíaco o controlar funciones multimedia.</p></section>
+  <p> En resumen, la electrónica digital se ha convertido en una tecnología transversal que impulsa el desarrollo de casi todos los sectores modernos, desde lo cotidiano hasta lo industrial, científico y médico. Su versatilidad y capacidad para procesar información con rapidez y precisión la hacen indispensable en un mundo cada vez más conectado e inteligente.</p>
+</section>
+</main>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Cra. 45 #48-31, Nte. Centro Historico, Barranquilla, Atlántico, Colombia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.4808111654015!2d-74.78529208962328!3d10.986044856989311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d6495db4481%3A0xda626b57e9840495!2sUniversity%20Institution%20ITSA!5e1!3m2!1sen!2sco!4v1745548279789!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><i class="fas fa-phone"></i> +57 3045574048</p>
+        <p><i class="fas fa-envelope"></i> info@DiegoOrellanoElectronicaDigital.com</p>
+      </div>
+      <div class="footer-section social-media">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/DiegoOrellanoElectronicaDigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+      <p>© 2025 Diego Orellano. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>
